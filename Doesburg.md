@@ -21,6 +21,6 @@ Using that we can see that, indeed, our program loops forever, our input is popp
 
 But there is so much more code in this picture we don't even reach! Let's change this picture, shall we?
 
-As I said before, interpreting starts from top-left codel(pixel) and goes to the right. Next block is black, which redirects our control flow downwards. After that we insert things on the stack, get our input, disregard it and loop indefinitely in white area in the middle. But behind this black codel there is a huge part of code along the borders. We can change top-left black codel to a white one (noop) to get to this picture: ![](piet.png?raw=true)
+As I said before, interpreting starts from top-left codel(pixel) and goes to the right. Next block is black, which redirects our control flow downwards. After that we insert things on the stack, get our input, disregard it and loop indefinitely in white area in the middle. But behind this black codel there is a huge part of code along the borders. We can change top-left black codel (at position (x = 0,y = 1)) to a white one (noop) to get to this picture: ![](piet.png?raw=true)
 
 After running `npiet piet.png` we get this output `{D3kc0lnU_wc_t31p}SD3`, which reversed is `3DS}p13t_cw_Unl0ck3D{` and fixed to fit the format is `3DS{p13t_cw_Unl0ck3D}` which is our flag.
