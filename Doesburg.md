@@ -17,3 +17,8 @@ After interpreting the original image with `npiet original_piet.png` we are prom
 Luckily, our interpret has some neat options like `-t`, which shows stack values and operations in order, or `-e n` which stops the program after n steps.
 
 Using that we can see that, indeed, our program loops forever, our input is popped from stack immediately after we enter it, and stack values are `87 82 79 78 71`.
+`87 82 79 78 71` = WRONG in ASCII, so we are suggested that, it is not the correct execution.
+
+But there is so much more code in this picture we don't even reach! Let's change this picture, shall we?
+
+As I said before, interpreting starts from top-left codel(pixel) and goes to the right. Next block is black, which redirects our control flow downwards. After that we insert things on the stack, get our input, disregard it and loop indefinitely in white area in the middle. But behind this top-left black codel there is a huge part along the borders. We can change black codel to a white one (noop) to get to this part: [](piet.png?raw=true)
