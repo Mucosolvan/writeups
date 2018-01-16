@@ -1,4 +1,5 @@
 ```you found this strange string on the floor """1rMrhv9mEAWBU99vE0QIIBN6qavpGvkczWDsiMtJRf3Y"""```
+
 There was also a hint, that `Google has something to do with it`
 
 I've spent way too much time figuring out the first part of this task. We're given a `strange string` in a Python comment, which is commonly used as a documentation string.
@@ -27,7 +28,6 @@ We see that some characters are missing, exactly `v` from `var`, `.` from `a.toS
 
 Let's merge all those characters together, to get `v.gd/lCOM0j`, which is a broken link, but it led to [here](https://hexed.it/#base64+lzjb:AIlQTkcNChoKAAAAAA1JSERSAAAABIAAAAKIhAgCABKHSRZaAAcAAXNSR0IArs4EHOkADQRnQU1BAAAAsY8L/GEFAQAQCXBIWXMAAAQOwwQEAcdvqGQAAAAKD0lEQVQAeF7t28F24jAADAVQZub/v5kAmsioqpNAUigAHeDehZFkx1kYvwMcAECIA97TnwCzqGM4mM/XTgA2udWKoW7qPADWUOswnfrUpwEAQM+rZpuNOWcACkQnvS/6xrQAFWtYrOuxeiAAzCe7DG8BAAAA+CF/++c2LaIA1JSSbRaD4/EAmGueiSK3cpgAa5hPmmxbEaIAbYb2Rw0vetgAewEAgKe2L4AAtbwUwWnNxigAUi+Juq5hcTIAtL2a3lvbuTsAZqS4Ki/MdpggLIpjTe8AWLbLACxxNVTUkxcOAMdu0/tJbaOuAGsa2qptpT46AOvTsz5dl2eiQBjaWqy5egCieABJ//rnbbYkigD7po52W14YdQAT7aK2G1+RXQA4lmcGwyPZRoBRd+eTRVcPACsAL2nfTxDXtNwAshhdqqsHdpkAv7FOWsKpYhgAhqc26hfdEJwEbnwBNngB9wlgAL+rRq8Qk9SnAJMIQlXfuGjxAJ5endXJdPGXALZXAADAG3viAAC2K9VkfIooAJViGKKdotOnANgaxHx4vBkmAPXx08vK7trNAQBtrDqltEnvS0C4qkWobdQAEHwAX+SrpvdnOZkCbwDg7+AV/gP2QH8afnAodAAP/AACYQwAAN6TbwLAACkeRAB7NF/+fwAXAA38A/xC/EL8QvxC//xC/EL8QvxC/EL8QvxC/EL//EL8QvxC/EL8QvxC/EL8Qv/8QvxC/EL8QvxC/EL8QvxCA/xC/EIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK/vcPgAOg4AjnxzEl0bAAAAAABJRU5ErkIAYII=).
 
-In the link we find a Base64 encoded image: !(image)[image.png]. Let's look at it using [Stegsolve](https://github.com/eugenekolo/sec-tools/blob/master/stego/stegsolve/stegsolve/stegsolve.jar). After looking at the picture in blue plane we get !(image2)[solved.png].
-
+In the link we find a Base64 encoded image: ![](image.png?raw=true). Let's look at it using [Stegsolve](https://github.com/eugenekolo/sec-tools/blob/master/stego/stegsolve/stegsolve/stegsolve.jar). After looking at the picture in blue plane we get ![](solved.png?raw=true).
 
 So, the flag is `tpctf{fl4g5_r_4_n00bs}`.
