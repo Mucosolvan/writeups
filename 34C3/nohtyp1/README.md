@@ -1,9 +1,9 @@
 In this easy RE challenge we're given a Python script: [snakes](./original.py) and a hint
 
 ```
-    $ cat flag | md5sum
+$ cat flag | md5sum
 
-    5a76c600c2ca0f179b643a4fcd4bc7ac
+5a76c600c2ca0f179b643a4fcd4bc7ac
 ```
 
 The first thing to do is of course, deobfuscate the script to make it [human-readable](./script.py). 
@@ -49,9 +49,9 @@ def reverse(value, char):
 	value ^= 21
 	return chr(value)
 ```
-Firstly, we know that our flag will begin with `34C3_`. Using `reverse` we can guess last 5 characters of the flag, which are `tzzzz`.
+Firstly, we know that our flag will begin with `34C3_`. Using `reverse` we can deduce last 5 characters of the flag, which are `tzzzz`.
 That means we know one more character - before `tzzzz` we need an underscore, so using that we can get next character from the beginning, which is `m`. That leads us to a guess, since we need to fit `mo4r` into our string, let's do it right now, and add `_` after. Once again, decoding characters from the end gives us this part of flag: `34C3_mo4r_****4kes_tzzzz`. 
 
-Right now we can wither bruteforce last 4 characters and check the md5sum, or bruteforce and see if it makes sense in leet speak :D I've done the latter, and our flag is `34C3_mo4r_schn4kes_tzzzz`.
+Right now we can either bruteforce last 4 characters and check the md5sum, or bruteforce and see if it makes sense in leet speak :D I've done the latter, and our flag is `34C3_mo4r_schn4kes_tzzzz`.
 
 
